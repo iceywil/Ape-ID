@@ -16,7 +16,10 @@ export default function SetText() {
 
 	const labelHash = labelhash(normalize('Test'));
 
-	
+	console.log(`labelHash: ${labelHash}`);
+	console.log(`key: ${key}`);
+	console.log(`value: ${value}`);
+
 	return (
 		<div>	
 			<input name="myInput" defaultValue="Name" onChange={e => setKey(e.target.value)}/>
