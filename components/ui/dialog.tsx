@@ -1,6 +1,13 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 
-export const Dialog = ({ open, onOpenChange, children }) => {
+// Define the types for the props
+interface DialogProps {
+  open: boolean;
+  onOpenChange: (open: boolean) => void;
+  children: ReactNode;
+}
+
+export const Dialog: React.FC<DialogProps> = ({ open, onOpenChange, children }) => {
   if (!open) return null;
 
   return (
@@ -15,6 +22,11 @@ export const Dialog = ({ open, onOpenChange, children }) => {
   );
 };
 
-export const DialogContent = ({ children }) => <div>{children}</div>;
-export const DialogHeader = ({ children }) => <div className="mb-4">{children}</div>;
-export const DialogTitle = ({ children }) => <h2 className="text-2xl">{children}</h2>; 
+// Define the types for the children prop
+interface ChildrenProps {
+  children: ReactNode;
+}
+
+export const DialogContent: React.FC<ChildrenProps> = ({ children }) => <div>{children}</div>;
+export const DialogHeader: React.FC<ChildrenProps> = ({ children }) => <div className="mb-4">{children}</div>;
+export const DialogTitle: React.FC<ChildrenProps> = ({ children }) => <h2 className="text-2xl">{children}</h2>; 

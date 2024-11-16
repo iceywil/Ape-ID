@@ -9,9 +9,14 @@ import PassportClosed from "./PassportClosed";
 import Register from "./register";
 import SetText from "./setText";
 import { Separator } from "@/components/ui/separator";
+//import getUserData from "@/app/data/retrieve_user.mjs";
+
 export function PassportProfile() {
   const { user } = useDynamicContext();
   const isLoggedIn = useIsLoggedIn();
+
+  //let data = getUserData(user?.userId);
+  console.log("userId", user?.userId);
 
   return !isLoggedIn ? (
     <div className="w-full max-w-5xl mx-auto my-8 p-4 font-montreal 100vh">
