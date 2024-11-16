@@ -3,16 +3,19 @@ import { abi } from './abi'
 import { useState } from 'react'
 import { getAccount } from '@wagmi/core'
 import { config } from './config'
+import { useDynamicContext } from '@dynamic-labs/sdk-react-core'
 
 export default function Register() {
 
 	const { writeContract } = useWriteContract()
 	const account = getAccount(config).address;
+	const { primaryWallet } = useDynamicContext();
 
 	const [firstName, setFirstName] = useState('');
 
-	console.log(firstName);
-	console.log(account);
+	console.log(`firstName : ${firstName}`);
+	console.log(`account : ${account}`);
+	console.log(`primaryWallet : ${primaryWallet}`);
 
 	return (
 		<div>	
