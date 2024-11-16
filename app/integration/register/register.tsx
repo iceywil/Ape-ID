@@ -28,7 +28,7 @@ export default function SetText() {
 				(wallet || '0x0000000000000000000000000000000000000000') as `0x${string}`,
 			]
 		});
-		setRes(result.data);
+		//setRes(result.data);
 	}
 
 	return (
