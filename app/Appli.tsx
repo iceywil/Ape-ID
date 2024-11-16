@@ -1,7 +1,7 @@
 import Header from "../components/Header";
 import { PassportProfile } from "../components/passport-profile";
-import Register from './integration/register'
-import SetText from './setText/setText'
+import Register from './integration/register/register'
+import SetText from './integration/setText/setText'
 
 function Appli() {
 	return (

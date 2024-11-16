@@ -2,7 +2,7 @@ import { useWriteContract } from 'wagmi'
 import { abi } from './abi'
 import { useState } from 'react'
 import { getAccount } from '@wagmi/core'
-import { config } from '../integration/config'
+import { config } from '../register/config'
 import { useDynamicContext } from '@dynamic-labs/sdk-react-core'
 import { labelhash, normalize } from 'viem/ens';
 
