@@ -22,7 +22,7 @@ export default function SetText() {
     <div className="flex flex-row gap-4 justify-center">
       <img src="/images/ens-mark-Dark_Blue.png" alt="domain" className="h-8" />
       <Input
-        className="max-w-40"
+        className="min-w-20"
         name="myInput"
         defaultValue="Mint a Domain Name"
         onChange={(e) => setFirstName(e.target.value)}
