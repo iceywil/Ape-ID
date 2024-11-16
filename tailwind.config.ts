@@ -49,7 +49,13 @@ export default {
   				'3': 'hsl(var(--chart-3))',
   				'4': 'hsl(var(--chart-4))',
   				'5': 'hsl(var(--chart-5))'
-  			}
+  			},
+  			cream: '#E1D7D5',
+  			navy: '#0F172A'
+  		},
+  		fontFamily: {
+  			bit: ['PPNeueBit', 'sans-serif'],
+  			montreal: ['PPNeueMontreal', 'sans-serif']
   		},
   		borderRadius: {
   			lg: 'var(--radius)',
