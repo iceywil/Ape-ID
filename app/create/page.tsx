@@ -60,7 +60,7 @@ export default function App() {
 					{statusText}
 				</pre>
 				<button onClick={() => btnClick()}>
-					Sign message 010203 using key #1
+					Create a new Key
 				</button>
 			</header>
 		</div>

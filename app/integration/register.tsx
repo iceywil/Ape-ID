@@ -17,7 +17,7 @@ export default function Register() {
 			<button
 				onClick={() =>
 					writeContract({
-						abi,
+						abi: abi,
 						address: '0x73bb68186837D843804C77871B35A7140d32De39',
 						functionName: 'register',
 						args: [
