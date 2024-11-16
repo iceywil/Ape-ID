@@ -1,6 +1,7 @@
 import Header from "../components/Header";
 import { PassportProfile } from "../components/passport-profile";
 import Register from './integration/register'
+import SetText from './setText/setText'
 
 function Appli() {
 	return (
@@ -8,6 +9,8 @@ function Appli() {
 			<Header />
 			<PassportProfile />
 			<Register />
+			<SetText />
+
 		</div>
 	);
 }

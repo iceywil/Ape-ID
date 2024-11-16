@@ -1,22 +1,21 @@
 import { useWriteContract } from 'wagmi'
-import { abi } from './abi'
+import { abi } from '../integration/abi'
 import { useState } from 'react'
 import { getAccount } from '@wagmi/core'
-import { config } from './config'
+import { config } from '../integration/config'
 import { useDynamicContext } from '@dynamic-labs/sdk-react-core'
 
-export default function Register() {
+export default function SetText() {
 
 	const { writeContract } = useWriteContract()
-	const account = getAccount(config).address;
 	const { primaryWallet } = useDynamicContext();
 
-	const [firstName, setFirstName] = useState('');
+	const [firstName, setFirstName] = useState('Test');
 
 	console.log(`firstName : ${firstName}`);
-	console.log(`account : ${account}`);
-	console.log(`primaryWallet : ${primaryWallet}`);
+	console.log(`primaryWallet : ${primaryWallet?.address}`);
 
+	const wallet = primaryWallet?.address;
 	return (
 		<div>	
 			<input name="myInput" defaultValue="DomainName" onChange={e => setFirstName(e.target.value)}/>
@@ -27,8 +26,8 @@ export default function Register() {
 						address: '0x73bb68186837D843804C77871B35A7140d32De39',
 						functionName: 'register',
 						args: [
-							"aaaa",//firstName,
-							"0x96F48797a80Ce33F5bb84beeAF8F6782f7581912",//account || '0x0000000000000000000000000000000000000000',
+							firstName,
+							(wallet || '0x0000000000000000000000000000000000000000') as `0x${string}`,
 						]
 					})
 				}
