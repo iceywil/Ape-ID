@@ -4,14 +4,13 @@ import { execHaloCmdWeb } from '@arx-research/libhalo/api/web';
 import React, { useState } from 'react';
 
 export default function App() {
-	const [statusText, setStatusText] = useState('Click on the button');
+	const [statusText, setStatusText] = useState('Loading..');
 
 	async function btnClick() {
 		let command = {
-
-			"name": "sign_challenge",
-			"keyNo": 2,
-			"challenge": "bdf40bc6b028a50a1772aa8b6fe4e957d367b5ff21ebd0954682e479aae68976"
+			name: "sign",
+			keyNo: 1,
+			message: "010203"
 		};
 
 		let res;
