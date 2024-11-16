@@ -1,7 +1,9 @@
+"use client"
+
 import { execHaloCmdWeb } from '@arx-research/libhalo/api/web';
 import React, { useState } from 'react';
 
-function App() {
+export default function App() {
 	const [statusText, setStatusText] = useState('Click on the button');
 
 	async function btnClick() {
