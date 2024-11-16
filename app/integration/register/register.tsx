@@ -1,8 +1,6 @@
 import { useWriteContract } from 'wagmi'
 import { abi } from './abi'
 import { useState } from 'react'
-import { getAccount } from '@wagmi/core'
-import { config } from './config'
 import { useDynamicContext } from '@dynamic-labs/sdk-react-core'
 
 export default function SetText() {
@@ -19,6 +17,7 @@ export default function SetText() {
 	const wallet = primaryWallet?.address;
 
 	function Wrt(){
+
 		const result = writeContract({
 			abi: abi,
 			address: '0x73bb68186837D843804C77871B35A7140d32De39',
@@ -28,7 +27,8 @@ export default function SetText() {
 				(wallet || '0x0000000000000000000000000000000000000000') as `0x${string}`,
 			]
 		});
-		//setRes(result.data);
+		if(result != null)
+			setRes(result);
 	}
 
 	return (

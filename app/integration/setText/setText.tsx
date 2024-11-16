@@ -1,15 +1,11 @@
 import { useWriteContract } from 'wagmi'
 import { abi } from './abi'
 import { useState } from 'react'
-import { getAccount } from '@wagmi/core'
-import { config } from '../register/config'
-import { useDynamicContext } from '@dynamic-labs/sdk-react-core'
 import { labelhash, normalize } from 'viem/ens';
 
 export default function SetText() {
 
 	const { writeContract } = useWriteContract()
-	const { primaryWallet } = useDynamicContext();
 
 	const [key, setKey] = useState('Name');
 	const [value, setValue] = useState('Will');
