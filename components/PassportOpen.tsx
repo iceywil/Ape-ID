@@ -9,6 +9,7 @@ import PassportClosed from "./PassportClosed";
 import Register from "./register";
 import SetText from "./setText";
 import { Separator } from "@/components/ui/separator";
+import { IRL } from "./irl";
 //import getUserData from "@/app/data/retrieve_user.mjs";
 
 export function PassportProfile() {
@@ -31,6 +32,8 @@ export function PassportProfile() {
           <Register />
           <Separator className="my-4" />
           <SetText />
+          <Separator className="my-4" />
+          <IRL />
           <div className="absolute top-0 right-0 bottom-0 w-8 bg-gradient-to-l from-gray-200 to-transparent"></div>
         </div>
         <Badges />

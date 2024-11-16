@@ -2,6 +2,7 @@ import { Badge } from "lucide-react";
 import React from "react";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import Image from "next/image";
+const pseudoRandomNumbers = [3, 7, 2, 9, 4, 1, 8, 5, 6];
 
 const Badges: React.FC = () => {
   return (
@@ -16,7 +17,7 @@ const Badges: React.FC = () => {
               key={badge}
               className="flex flex-col items-center justify-center p-4 rounded-lg"
               style={{
-                transform: `rotate(${Math.random() * 20 - 10}deg)`,
+                transform: `rotate(${pseudoRandomNumbers[badge - 1]}deg)`,
                 // marginLeft: `${Math.random() * 50}px`,
               }}
             >
