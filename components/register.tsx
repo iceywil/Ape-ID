@@ -4,6 +4,9 @@ import { useState } from "react";
 import { getAccount } from "@wagmi/core";
 import { config } from "../app/integration/register/config";
 import { useDynamicContext } from "@dynamic-labs/sdk-react-core";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Separator } from "@/components/ui/separator";
 
 export default function SetText() {
   const { writeContract } = useWriteContract();
@@ -16,13 +19,15 @@ export default function SetText() {
 
   const wallet = primaryWallet?.address;
   return (
-    <div>
-      <input
+    <div className="flex flex-row gap-4 justify-center">
+      <img src="/images/ens-mark-Dark_Blue.png" alt="domain" className="h-8" />
+      <Input
+        className="max-w-40"
         name="myInput"
-        defaultValue="DomainName"
+        defaultValue="Mint a Domain Name"
         onChange={(e) => setFirstName(e.target.value)}
       />
-      <button
+      <Button
         onClick={() =>
           writeContract({
             abi: abi,
@@ -36,8 +41,8 @@ export default function SetText() {
           })
         }
       >
-        Transfer
-      </button>
+        Mint
+      </Button>
     </div>
   );
 }

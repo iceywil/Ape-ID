@@ -8,12 +8,12 @@ import { useDynamicContext, useIsLoggedIn } from "@dynamic-labs/sdk-react-core";
 import PassportClosed from "./PassportClosed";
 import Register from "./register";
 import SetText from "./setText";
-
+import { Separator } from "@/components/ui/separator";
 export function PassportProfile() {
   const { user } = useDynamicContext();
   const isLoggedIn = useIsLoggedIn();
 
-  return isLoggedIn ? (
+  return !isLoggedIn ? (
     <div className="w-full max-w-5xl mx-auto my-8 p-4 font-montreal 100vh">
       <div className="flex rounded-2xl shadow-lg overflow-hidden relative">
         <div className="absolute inset-y-0 left-1/2 w-[4px] bg-gradient-to-r from-gray-200 to-white transform -translate-x-1/2 z-10"></div>
@@ -22,7 +22,9 @@ export function PassportProfile() {
             Passport No: 20241116
           </div>
           <Profile />
+          <Separator className="my-4" />
           <Register />
+          <Separator className="my-4" />
           <SetText />
           <div className="absolute top-0 right-0 bottom-0 w-8 bg-gradient-to-l from-gray-200 to-transparent"></div>
         </div>
