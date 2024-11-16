@@ -24,8 +24,8 @@ export default function Register() {
 						address: '0x73bb68186837D843804C77871B35A7140d32De39',
 						functionName: 'register',
 						args: [
-							firstName,
-							account || '0x0000000000000000000000000000000000000000',
+							"aaaa",//firstName,
+							"0x96F48797a80Ce33F5bb84beeAF8F6782f7581912",//account || '0x0000000000000000000000000000000000000000',
 						]
 					})
 				}
