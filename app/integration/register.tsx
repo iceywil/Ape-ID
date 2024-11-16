@@ -11,6 +11,9 @@ export default function Register() {
 
 	const [firstName, setFirstName] = useState('');
 
+	console.log(firstName);
+	console.log(account);
+
 	return (
 		<div>	
 			<input name="myInput" defaultValue="DomainName" onChange={e => setFirstName(e.target.value)}/>
