@@ -1,0 +1,3 @@
+[submodule "durin"]
+	path = durin
+	url = https://github.com/resolverworks/durin.git
