@@ -6,8 +6,8 @@ import Badges from "./Badges";
 import Profile from "./Profile";
 import { useDynamicContext, useIsLoggedIn } from "@dynamic-labs/sdk-react-core";
 import PassportClosed from "./PassportClosed";
-import Register from "./register";
-import SetText from "./setText";
+import Register from "../app/integration/register/register";
+import SetText from "../app/integration/setText/setText";
 
 export function PassportProfile() {
   const { user } = useDynamicContext();

@@ -1,8 +1,6 @@
 import { useWriteContract } from 'wagmi'
 import { abi } from './abi'
 import { useState } from 'react'
-import { getAccount } from '@wagmi/core'
-import { config } from './config'
 import { useDynamicContext } from '@dynamic-labs/sdk-react-core'
 
 export default function SetText() {
