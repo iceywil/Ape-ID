@@ -3,7 +3,7 @@
 import { execHaloCmdWeb } from '@arx-research/libhalo/api/web';
 import React, { useState } from 'react';
 
-export default function App() {
+export default function Create() {
 	const [statusText, setStatusText] = useState('Loading..');
 
 	async function btnClick() {

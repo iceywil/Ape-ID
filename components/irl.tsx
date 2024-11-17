@@ -9,8 +9,35 @@ import {
   DrawerTitle,
   DrawerTrigger,
 } from "@/components/ui/drawer";
+import Create from "@/app/create/page";
+import Url from "@/app/url/page";
+import Verify from "@/app/verify/page";
+import { labelhash, normalize } from 'viem/ens';
+import { useWriteContract } from 'wagmi'
+import { abi } from '@/app/integration/setText/abi'
+import { useState } from "react";
 
 export function IRL() {
+
+	const labelHash = labelhash(normalize('Test'));
+	const { writeContract } = useWriteContract()
+	const [res, setRes] = useState('Test');
+
+	function Link() {
+		const result = writeContract({
+			abi: abi,
+			address: '0x6536194058CA83Ec79737b14570584E99b88B428',
+			functionName: 'setText',
+			args: [
+				labelHash,
+				"text",
+				"0x124347a80Ce33F5bb84beeAF8F6782f1223321"
+			]
+		});
+		if (result != null)
+			setRes(result);
+	}
+
   return (
     <div>
       <Drawer>
@@ -19,19 +46,16 @@ export function IRL() {
         </DrawerTrigger>
         <DrawerContent style={{ width: '100vw', height: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
           <div style={{ position: 'absolute', top: '3em', left: '1em' }}>
-            <Button style={{ fontSize: '1.2em', padding: '1em 2em' }}>Change URL</Button>
+            <Button onClick={Url} style={{ fontSize: '1.2em', padding: '1em 2em' }}>Change URL</Button>
           </div>
           <div style={{ position: 'absolute', top: '3em', right: '1em' }}>
-            <Button style={{ fontSize: '1.2em', padding: '1em 2em' }}>Create Physical Wallet</Button>
+            <Button onClick={Create} style={{ fontSize: '1.2em', padding: '1em 2em' }}>Create Physical Passport Keypair</Button>
           </div>
           <div style={{ position: 'absolute', bottom: '12em', right: '1em' }}>
-            <Button style={{ fontSize: '1.2em', padding: '1em 2em' }}>Verify Passport</Button>
+            <Button onClick={Verify} style={{ fontSize: '1.2em', padding: '1em 2em' }}>Verify Passport</Button>
           </div>
           <div style={{ position: 'absolute', bottom: '12em', left: '1em' }}>
-            <Button style={{ fontSize: '1.2em', padding: '1em 2em' }}>Check URL</Button>
-          </div>
-          <div style={{ flex: 1, display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%' }}>
-            <Button style={{ fontSize: '1.2em', padding: '1em 2em' }}>Physical Passport</Button>
+            <Button onClick={Link} style={{ fontSize: '1.2em', padding: '1em 2em' }}>Link Physical Passport to Digital Passport</Button>
           </div>
           <div style={{ width: '100%' }}>
             <DrawerHeader>

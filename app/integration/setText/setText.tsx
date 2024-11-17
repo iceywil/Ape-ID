@@ -11,7 +11,7 @@ export default function SetText() {
 	const [value, setValue] = useState('Will');
 	const [res, setRes] = useState('Test');
 
-	const labelHash = labelhash(normalize('Test'));
+	const labelHash = labelhash(normalize('Will'));
 
 	console.log(`labelHash: ${labelHash}`);
 	console.log(`key: ${key}`);
