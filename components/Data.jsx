@@ -25,7 +25,7 @@ function DataComponent({ verifiedCredentialsArray }) {
 							) : credential.address ? (
 								credential.address
 							) : (
-								"No valid data"
+								""
 							)}
 						</li>
 					))}
