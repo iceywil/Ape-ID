@@ -12,7 +12,7 @@ export default function App() {
 		{
 			"name": "store_graffiti",
 			"slotNo": 1,
-			"data": "https://ethgl.vercel.app/"
+			"data": "ethgl.vercel.app"
 		}
 		let res;
 

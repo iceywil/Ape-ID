@@ -12,6 +12,7 @@ import {
 
 export function IRL() {
   return (
+<<<<<<< HEAD
     <div>
       <Drawer>
         <DrawerTrigger asChild>
@@ -46,5 +47,17 @@ export function IRL() {
         </DrawerContent>
       </Drawer>
     </div>
+=======
+    <Drawer>
+      <DrawerTrigger asChild>
+        <Button>IRL Passeport</Button>
+      </DrawerTrigger>
+      <DrawerContent>
+        <DrawerFooter>
+          <DrawerClose>Back</DrawerClose>
+        </DrawerFooter>
+      </DrawerContent>
+    </Drawer>
+>>>>>>> 85c96076491149744d71780ab77cc70e2c3405b5
   );
 }
