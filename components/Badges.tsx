@@ -12,7 +12,7 @@ const Badges: React.FC = () => {
       </h3>
       <ScrollArea className="h-[534px]">
         <div className="flex flex-wrap gap-4 pr-4 justify-center align-center">
-          {[1, 2, 3, 4].map((badge) => (
+          {[1, 2, 3, 4, 5].map((badge) => (
             <div
               key={badge}
               className="flex flex-col items-center justify-center p-4 rounded-lg"

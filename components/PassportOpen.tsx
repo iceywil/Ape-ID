@@ -34,8 +34,8 @@ export function PassportProfile() {
           <Separator className="my-4" />
           <SetText />
           <Separator className="my-4" />
-		  <Data verifiedCredentialsArray={user?.verifiedCredentials}/>
-		  <Separator className="my-4" />
+          <Data verifiedCredentialsArray={user?.verifiedCredentials} />
+          <Separator className="my-4" />
           <IRL />
           <div className="absolute top-0 right-0 bottom-0 w-8 bg-gradient-to-l from-gray-200 to-transparent"></div>
         </div>
@@ -43,7 +43,7 @@ export function PassportProfile() {
       </div>
     </div>
   ) : (
-    <div className="flex justify-center items-center h-screen">
+    <div className="flex justify-center items-center mt-16">
       <PassportClosed
         className="flex self-center"
         width={323 * 1.5}
