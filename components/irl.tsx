@@ -38,30 +38,12 @@ export function IRL() {
         <DrawerTrigger asChild>
           <Button>Connect Your Physical Passport</Button>
         </DrawerTrigger>
-        <DrawerContent
-          style={{
-            width: "100vw",
-            height: "100vh",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-          }}
-        >
-          <div style={{ position: "absolute", top: "3em", left: "1em" }}>
-            <Button
-              onClick={Url}
-              style={{ fontSize: "1.2em", padding: "1em 2em" }}
-            >
-              Change URL
-            </Button>
+        <DrawerContent style={{ width: '100vw', height: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+          <div style={{ position: 'absolute', top: '5em', left: '1em' }}>
+            <Button onClick={Url} style={{ fontSize: '1.2em', padding: '1em 2em' }}>Change URL</Button>
           </div>
-          <div style={{ position: "absolute", top: "3em", right: "1em" }}>
-            <Button
-              onClick={Create}
-              style={{ fontSize: "1.2em", padding: "1em 2em" }}
-            >
-              Create Physical Passport Keypair
-            </Button>
+          <div style={{ position: 'absolute', top: '5em', right: '1em' }}>
+            <Button onClick={Create} style={{ fontSize: '1em', padding: '0.8em 1.5em' }}>Create Keypair</Button>
           </div>
           <div style={{ position: "absolute", bottom: "12em", right: "1em" }}>
             <Button
@@ -71,13 +53,8 @@ export function IRL() {
               Verify Passport
             </Button>
           </div>
-          <div style={{ position: "absolute", bottom: "12em", left: "1em" }}>
-            <Button
-              onClick={Link}
-              style={{ fontSize: "1.2em", padding: "1em 2em" }}
-            >
-              Link Physical Passport to Digital Passport
-            </Button>
+          <div style={{ position: 'absolute', bottom: '16em', left: '1em' }}>
+            <Button onClick={Link} style={{ fontSize: '1em', padding: '0.8em 1.5em' }}>Link Passport</Button>
           </div>
           <div style={{ width: "100%" }}>
             <DrawerHeader>
