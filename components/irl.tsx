@@ -14,16 +14,11 @@ export function IRL() {
   return (
     <Drawer>
       <DrawerTrigger asChild>
-        <Button>IRL Connexion</Button>
+        <Button>IRL Passeport</Button>
       </DrawerTrigger>
       <DrawerContent>
-        <DrawerHeader>
-          <DrawerTitle>Are you absolutely sure?</DrawerTitle>
-          <DrawerDescription>This action cannot be undone.</DrawerDescription>
-        </DrawerHeader>
         <DrawerFooter>
-          <Button>Submit</Button>
-          <DrawerClose>Cancel</DrawerClose>
+          <DrawerClose>Back</DrawerClose>
         </DrawerFooter>
       </DrawerContent>
     </Drawer>
