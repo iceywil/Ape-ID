@@ -24,7 +24,7 @@ export default function SetText() {
       <Input
         className="min-w-20"
         name="myInput"
-        defaultValue="Mint a Domain Name"
+        placeholder="Mint a Domain Name"
         onChange={(e) => setFirstName(e.target.value)}
       />
       <Button
