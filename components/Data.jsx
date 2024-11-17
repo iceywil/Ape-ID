@@ -1,6 +1,8 @@
 "use client";
 
 function DataComponent({ verifiedCredentialsArray }) {
+	if (verifiedCredentialsArray == null)
+		return ;
 	return (
 		<ul>
 			{verifiedCredentialsArray.map((credential, index) => (
