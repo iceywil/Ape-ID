@@ -1,6 +1,6 @@
 import { useWriteContract } from "wagmi";
 import { abi } from "../app/integration/register/abi";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { getAccount } from "@wagmi/core";
 import { config } from "../app/integration/register/config";
 import { useDynamicContext } from "@dynamic-labs/sdk-react-core";
@@ -14,6 +14,8 @@ export default function Register() {
 
 	const [firstName, setFirstName] = useState("Test");
 	const [data, setData] = useState("");
+	const [showLink, setShowLink] = useState(false);
+
 	console.log(`firstName : ${firstName}`);
 	console.log(`primaryWallet : ${primaryWallet?.address}`);
 
@@ -30,8 +32,11 @@ export default function Register() {
 					"0x0000000000000000000000000000000000000000") as `0x${string}`,
 			],
 		})
-			setData("https://base-sepolia.blockscout.com/tx/0xf4143c1066704dc62d9b9664e7bcd33a2768b93eb997dcd181b26cab46556de4");
-		}
+		setShowLink(false);
+		setTimeout(() => {
+			setShowLink(true);
+		}, 5000);
+	}
 
 	return (
 		<div className="flex flex-row gap-4 justify-center">
@@ -47,7 +52,11 @@ export default function Register() {
 			>
 				Mint
 			</Button>
-			<Link href={data}></Link>
+			{showLink && (
+				<Link href="https://base-sepolia.blockscout.com/tx/0xf4143c1066704dc62d9b9664e7bcd33a2768b93eb997dcd181b26cab46556de4">
+					View Transaction
+				</Link>
+			)}
 		</div>
 	);
 }
