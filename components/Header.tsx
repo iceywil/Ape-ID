@@ -3,7 +3,7 @@ import { DynamicWidget } from "@dynamic-labs/sdk-react-core";
 
 const Header: React.FC = () => {
   return (
-    <header className="bg-none px-4 py-2 border-b border-navy">
+    <header className="bg-white/90 px-4 py-2 border-b border-none">
       <div className="flex justify-between items-center">
         <div className="flex items-center">
           <h1 className="text-5xl font-bit">Ape ID</h1>

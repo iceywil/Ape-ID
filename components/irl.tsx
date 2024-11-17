@@ -18,8 +18,8 @@ export function IRL() {
       </DrawerTrigger>
       <DrawerContent>
         <DrawerHeader>
-          <DrawerTitle>Are you absolutely sure?</DrawerTitle>
-          <DrawerDescription>This action cannot be undone.</DrawerDescription>
+          <DrawerTitle>i</DrawerTitle>
+          <DrawerDescription>o</DrawerDescription>
         </DrawerHeader>
         <DrawerFooter>
           <Button>Submit</Button>
