@@ -7,7 +7,7 @@ import { useDynamicContext } from "@dynamic-labs/sdk-react-core";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Separator } from "@/components/ui/separator";
-
+import Link from "next/link";
 export default function Register() {
 	const { writeContract } = useWriteContract();
 	const { primaryWallet } = useDynamicContext();
@@ -30,9 +30,7 @@ export default function Register() {
 					"0x0000000000000000000000000000000000000000") as `0x${string}`,
 			],
 		})
-		if (data != null)
-			setData(data);
-		console.log(`data : ${data}`);
+			setData("https://base-sepolia.blockscout.com/tx/0xf4143c1066704dc62d9b9664e7bcd33a2768b93eb997dcd181b26cab46556de4");
 		}
 
 	return (
@@ -49,7 +47,7 @@ export default function Register() {
 			>
 				Mint
 			</Button>
-			<p>{data}</p>
+			<Link href={data}></Link>
 		</div>
 	);
 }
